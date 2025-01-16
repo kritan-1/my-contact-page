@@ -4,7 +4,7 @@ import { ProfileBanner } from "@/components/ProfileBanner";
 import { ProfileAvatar } from "@/components/ProfileAvatar";
 import { ContactForm } from "@/components/ContactForm";
 import { SocialLinks } from "@/components/SocialLinks";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Briefcase, Calendar, Globe } from "lucide-react";
 
 const Index = () => {
   return (
@@ -29,19 +29,66 @@ const Index = () => {
               <SocialLinks />
             </div>
 
-            <div className="w-full mt-8 grid gap-4 sm:grid-cols-2">
-              <div className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-muted-foreground" />
-                <span className="text-sm">anurag@zalient.me</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-muted-foreground" />
-                <span className="text-sm">+977981695795</span>
-              </div>
-              <div className="flex items-center gap-2 sm:col-span-2">
-                <MapPin className="h-4 w-4 text-muted-foreground" />
-                <span className="text-sm">Kathmandu, Nepal</span>
-              </div>
+            <div className="w-full mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Card className="p-4 hover:bg-secondary/10 transition-colors">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 rounded-full bg-primary/10">
+                    <Mail className="h-4 w-4 text-primary" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-xs text-muted-foreground">Email</span>
+                    <span className="text-sm font-medium">anurag@zalient.me</span>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-4 hover:bg-secondary/10 transition-colors">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 rounded-full bg-primary/10">
+                    <Phone className="h-4 w-4 text-primary" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-xs text-muted-foreground">Phone</span>
+                    <span className="text-sm font-medium">+977981695795</span>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-4 hover:bg-secondary/10 transition-colors">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 rounded-full bg-primary/10">
+                    <MapPin className="h-4 w-4 text-primary" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-xs text-muted-foreground">Location</span>
+                    <span className="text-sm font-medium">Kathmandu, Nepal</span>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-4 hover:bg-secondary/10 transition-colors">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 rounded-full bg-primary/10">
+                    <Briefcase className="h-4 w-4 text-primary" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-xs text-muted-foreground">Role</span>
+                    <span className="text-sm font-medium">Software Engineer</span>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-4 hover:bg-secondary/10 transition-colors sm:col-span-2">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 rounded-full bg-primary/10">
+                    <Globe className="h-4 w-4 text-primary" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-xs text-muted-foreground">Website</span>
+                    <span className="text-sm font-medium">www.anuragsubedi.com.np</span>
+                  </div>
+                </div>
+              </Card>
             </div>
 
             <div className="w-full mt-8">
